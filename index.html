@@ -7,15 +7,20 @@
     <title>Namaste React</title>
 </head>
 <body>
+    <h1>Above the Root Element</h1>
     <div id="root">
-        <h1>Akshya is here</h1> <!-- write something inside the root and we render the react element inside the
-        root using render method it will replace all the child or content inside the root with React elements-->
+        <h1>Akshya is here</h1>
+        <h1>Akshya is here</h1>
+        <h1>Akshya is here</h1>
     </div>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script><!--library to connect to the DOM and update the DOM nodes-->
-    <!--error Uncaught TypeError: ReactDOM.createRoot is not a function-->
-    <!--Order of the script is matter-->
+    <h2>Below the Root Element</h2>
+
+    <!--If we add the content above and below the root element if will render on the browser but whatever
+    written inside the root will replace by the react element using the render method means react will work 
+    only on the root element whom you have made the root element-->
+
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> <!--Core file of react js, core of react framework alogorithm-->
-    
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script><!--library to connect to the DOM and update the DOM nodes-->
     <script src="./Complex.js"></script>
 </body>
 </html>
