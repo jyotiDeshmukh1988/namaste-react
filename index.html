@@ -11,12 +11,11 @@
         <h1>Akshya is here</h1> <!-- write something inside the root and we render the react element inside the
         root using render method it will replace all the child or content inside the root with React elements-->
     </div>
-
-    <script src="./Complex.js"></script> <!--error Uncaught ReferenceError: React is not defined-->
-    <!--Order of the script is matter-->
-
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> <!--Core file of react js, core of react framework alogorithm-->
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script><!--library to connect to the DOM and update the DOM nodes-->
+    <!--error Uncaught TypeError: ReactDOM.createRoot is not a function-->
+    <!--Order of the script is matter-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> <!--Core file of react js, core of react framework alogorithm-->
     
+    <script src="./Complex.js"></script>
 </body>
 </html>
