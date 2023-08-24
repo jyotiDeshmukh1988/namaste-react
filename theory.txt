@@ -1,1 +1,96 @@
-test
+# What is NPM?
+=> It is a package manager who manages the packages that you have installed on your project.
+
+# How to add NPM to your project?
+=> From terminal just type command => npm init - it prompt you for some information give it then it will
+generate package.json which is configuration file of the npm.
+
+# What is Parcel/Webpack? why do we need it?
+=> They are are known bundler who forms a bundle by compressing all your html files,assets files which is ready to move
+into the production. It is used for giving our project superpowers(caching,compression,HMR etc) to make it fast loaded on the browser.
+
+# How to install package on your project?
+=> type command => npm install <packagename> or npm i <packagename> 
+install package with dependencies => npm install -D <packagename>
+
+# When package-lock.json generated?
+=> When you install any package first time package-lock.json file is created it keeps and track the exact verison of the package and its 
+sub dependencies and their version, and it is update automatically when you install and update packages. It keeps lock of the exact 
+version of the package. Also, there is integrity field in the package-lock.json file which is hash code of the package, which make 
+consistent integrity that the package version installed on local server which is also having the same version installed on the production
+server as well.
+
+# What is Transitive dependency?
+=> When you install any package then that package depend on the other dependency and those dependencies will depend on the other and so on.
+So this type of dependency is know as Transitive dependency
+
+# Will it required to add package and package-lock.json to git?
+=> Yes, becoz it metntioned all versions of the packages that required on your project when u run npm install command it will look for the 
+package-lock.json or not found then package.json file then install all the packages mentioned in the json file so it required to 
+add this file on the git repository.
+
+# What is .parcel-cache?
+=> It is automatically generated whenever you type npx parcel index.html. It contains cache of the files by adding hash code to it.
+
+# What is npx?
+=> It is used to execute or calling the package. for eg: npx parcel index.html (npx <packagename> entrypointfile)
+
+# What is difference between dependencies vs devDependencies
+=> When you install any package without adding parameter -D then it added as normal dependencies and with -D as devDependencies in package.json
+the difference between dependencies vs devDependencies is that package you requires in production we install as
+normal dependencies but the package we requires only in development phase will install it as devDependencies. 
+
+# What is Tree Shaking?
+=> Analyzing the imports and exports of each module, and removes everything that isn't used for eg: comments or console.
+
+# What is Hot Module Replacement?
+=> automatically updating the content when you save the file this type of behavior is called the Hot Module Replacement.
+
+# 5 Superpowers of Parcel and describe 3 of them
+=> Local server, Diagonostic error, faster builds due to caching create a folder called .partial-cache, automatically refresh the page whenever u update the changes called Hot Module Replacement, 
+File Watching Algorithm wriiten in C++, Image Optimization, Minification, SSL support, Tree Shaking
+
+# What is .gitignore? what should we add and not add into it?
+=> It is a file when we have mentioned which files should not be included in the git repository. For eg: node_modules, dist , cache folder
+becoz its automatically generated when we run the command on the server.
+
+# What is difference between package.json and package-lock.json?
+=> package.json keep track of the approx version of the package and package-lock.json keep track of the exact version of the package.
+
+# Why should I not modify 'package-lock.json?
+=> It keep track of the exact version of the package and it updated automatically whenever your package version changes.
+
+# What is node_modules? Is it a good idea to push that on git?
+=> Whenever you install any package node_modules created with package-lock.json file. It is a directory or database of all the packages and 
+its dependencies that you have installed on your project.
+It is huge in size and we never push that on git becoz it is automatically created when ever you type command - npm install it will first
+look for the package-lock.json file and install all the packages and their dependencies on your project. If the package-lock.json file
+is not present then it will look for package.json file.
+
+# What is the dist folder?
+=> Whenever you type npx parcel index.html. It generate build folder called dist. This folder is not ready for the 
+production becoz it not contains minified version of your files. But when you run npx parcel build index.html it will 
+create a folder with same name dist but now its contains the minified version of the code which is ready to go for the production.
+
+# What is browserlist read different dif bundlers vite,webpack, parcel
+=> It is a package which add the support of your app to the different browserlist. It means your app support to which version of the browser.
+
+# difference between caret and titde
+=> The caret(^) symbol specify a version range that allows both minor and patch updates.
+For example, if you specify a package version range of ^1.2.3, your project can use any version of the package that has a major version of 1, 
+but with a greater or equal minor version number. This means that your project can use versions 1.2.3, 1.3.0, 1.4.0, and so on, 
+but not versions 2.0.0.
+The tilde(~) symbol is used to specify a version range that allows patch updates. 
+For example, if you specify a package version range of ~1.2.3, your project can use any version of the package that has a major version of 1 
+and a minor version of 2, but with a greater or equal patch version number. This means that your project can use versions 1.2.3, 1.2.4, 
+1.2.5, and so on, but not versions 1.3.0 or 2.0.0.
+
+# Script types in html
+=> Type attribute specifies the type of the script. They are of two type 
+1. type="text/javascript" which tell the browser its a normal js file.
+2. type="module" which tell the browser is not a normal js file but a module file.
+
+# What is git and github
+=> Git is version control system used to track change of the files of your project while github is web based
+hosting service which provide you to create git repository which you can push and pull and used for 
+future development.
